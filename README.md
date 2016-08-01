@@ -1,2 +1,1 @@
-Black-White
-===========
+Simple Blog using Codeigniter and Bootstrap framework.
