@@ -1,0 +1,55 @@
+
+function stmp_config_info(){
+        global $mail;
+
+        $mail->SMTPDebug  = 0;
+        $mail->Host       = "localhost";
+        $mail->Port       = "25";
+        /*$mail->SMTPSecure = "none";
+        $mail->SMTPAuth   = true;
+        $mail->Username   = "admin@cryptors.org";
+        $mail->Password   = "Kirayagami666";*/
+
+}
+
+function send_email($recipient, $subject, $message){
+
+        //Create a new PHPMailer instance
+        $mail = new PHPMailer;
+        $mail->isSMTP();
+        stmp_config_info();
+
+        //Set who the message is to be sent from
+        $mail->setFrom('admin@cryptors.org', 'Cryptors');
+        //Set an alternative reply-to address
+        $mail->addReplyTo('admin@cryptors.org', 'Cryptors');
+        //Set who the message is to be sent to
+        $mail->addAddress($to);
+        //Set the subject line
+        $mail->Subject = $subject;
+        
+        //Read an HTML message body from an external file, convert referenced images to embedded,
+        //convert HTML into a basic plain-text alternative body
+        $mail->isHTML(true);
+       
+        $mail->addEmbeddedImage("../includes/media/img/facebook.png", fb, "fb.png");
+        $mail->addEmbeddedImage("../includes/media/img/twitter.png", tw, "tw.png");
+        $mail->addEmbeddedImage("../includes/media/img/linkedin.png", li, "li.png");
+        $mail->addEmbeddedImage("../includes/media/img/logo.png", logo, "logo.png");
+        $mail->addEmbeddedImage("../includes/media/img/icon1.png", icon1, "icon1.png");
+        $mail->addEmbeddedImage("../includes/media/img/icon2.png", icon2, "icon2.png");
+        $mail->addEmbeddedImage("../includes/media/img/icon3.png", icon3, "icon3.png");
+        
+        $email_message = $massage;
+        
+        $mail->msgHTML($email_message);
+        $mail->AltBody=strip_tags($email_message);
+
+        //send the message, check for errors
+        if (!$mail->send()) {
+            #return $mail->ErrorInfo;
+            return false;
+        } else {
+            return true;
+        }
+    }
