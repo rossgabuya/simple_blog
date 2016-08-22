@@ -1,0 +1,6 @@
+{
+  "name": "Simple blog",
+  "tagline": "A blog created using bootstrap and codeigniter framework",
+  "body": "###Hi there!\r\nThis is a simple blog application using codeigniter and bootstrap framework.\r\nBasically this is my sample project to start with codeigniter.\r\nI will update this occasionally and hopefully I could deploy it into a live server :)",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
