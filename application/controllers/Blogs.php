@@ -11,6 +11,7 @@ class Blogs extends CI_Controller {
                         $data['all_blog_posts'] = $this->blog_model-> get_all_blog_posts(10);
                         $data['title'] = 'Blog Posts';
                         $data['curr_url'] = $data['title'];
+                        $data['is_admin'] = false;
 
                         $this->load->view('templates/header', $data);
                         $this->load->view('blogs/index', $data);
@@ -19,6 +20,7 @@ class Blogs extends CI_Controller {
 
                 public function view($cat_slug = NULL){
                         $data['curr_url'] = $this->uri->ruri_to_assoc(3);
+                        $data['is_admin'] = false;
                         $data['blog_categories'] = $this->blog_model->get_blog_categories();
 
                             $data['blog_posts'] = $this->blog_model->get_blog_categories($cat_slug);
@@ -42,6 +44,7 @@ class Blogs extends CI_Controller {
                 public function post($cat_slug = NULL,$post_slug = NULL){
                     $data['curr_url'] = $this->uri->ruri_to_assoc(3);
                     $data['blog_categories'] = $this->blog_model->get_blog_categories();
+                    $data['is_admin'] = false;
 
                          $data['blog_post_contents'] = $this->blog_model->get_blog_post($cat_slug,$post_slug);
                             if (empty($data['blog_post_contents'])){

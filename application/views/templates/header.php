@@ -27,7 +27,7 @@
 				<div class="row">
 					<div class="col-md-4 col-sm-5 col-xs-8">
 						<div class="logo">
-							<h1><?php echo anchor('index','Simple Me','');?></h1>
+							<h1><?php echo anchor('home','Simple Me','');?></h1>
 						</div>
 					</div><!-- col-md-4 -->
 					<div class="col-md-8 col-sm-7 col-xs-4">

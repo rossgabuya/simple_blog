@@ -9,7 +9,7 @@
 								<figure class="img-responsive-center">
 								<?php 
 									$dev_img_properties = array(
-								        'src'   => 'media/img/me.jpg',
+								        'src'   => 'media/img/me.JPG',
 								        'alt'   => 'dev_image',
 								        'class' => 'img-responsive',
 								        'style' => 'height:300px;width:250px;',

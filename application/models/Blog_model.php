@@ -22,8 +22,8 @@ class Blog_model extends CI_Model {
                                 'posts.post_name',
                                 'posts.post_slug',
                                 'posts.content',
-                                'posts.created',
-                                'posts.last_updated'
+                                'posts.created_at',
+                                'posts.updated_at'
                                 );
 
                 $this->db->select($fields);
@@ -41,8 +41,8 @@ class Blog_model extends CI_Model {
                                 'posts.post_name',
                                 'posts.post_slug',
                                 'posts.content',
-                                'posts.created',
-                                'posts.last_updated'
+                                'posts.created_at',
+                                'posts.updated_at'
                                 );
 
                 $this->db->select($fields);
@@ -62,8 +62,8 @@ class Blog_model extends CI_Model {
                                 'posts.post_name',
                                 'posts.post_slug',
                                 'posts.content',
-                                'posts.created',
-                                'posts.last_updated'
+                                'posts.created_at',
+                                'posts.updated_at'
                                 );
 
                 $this->db->select($fields);

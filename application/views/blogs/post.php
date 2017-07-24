@@ -14,7 +14,7 @@
 								<div class="entry-meta">
 									<span class="post-category"><?php echo anchor('blogs/'.$blog_post_content['cat_slug'],$menu_name,'');?></span>
 			
-									<span class="post-date"><a href="#"><time class="entry-date" datetime="<?php echo date($blog_post_content['created']);?>"><?php echo date('D, F j,Y @ h:ia',mysql_to_unix($blog_post_content['created']));?></time></a></span>
+									<span class="post-date"><a href="#"><time class="entry-date" datetime="<?php echo date($blog_post_content['created_at']);?>"><?php echo date('D, F j,Y @ h:ia',mysql_to_unix($blog_post_content['created_at']));?></time></a></span>
 			
 									<span class="post-author"><a href="#">Albert Einstein</a></span>
 			

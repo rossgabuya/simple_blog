@@ -19,7 +19,7 @@
 									<?php echo anchor('blogs/'.$all_blog_post['cat_slug'],$all_blog_post['menu_name'],'');?>
 									</span>
 			
-									<span class="post-date"><a href="#"><time class="entry-date" datetime="<?php echo date($all_blog_post['created']);?>"><?php echo date('D, F j,Y @ h:ia',mysql_to_unix($all_blog_post['created']));?></time></a></span>
+									<span class="post-date"><a href="#"><time class="entry-date" datetime="<?php echo date($all_blog_post['created_at']);?>"><?php echo date('D, F j,Y @ h:ia',mysql_to_unix($all_blog_post['created_at']));?></time></a></span>
 			
 									<span class="post-author"><a href="#">Roselle Gabuya</a></span>
 			

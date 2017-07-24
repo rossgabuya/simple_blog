@@ -14,6 +14,16 @@
 								</li>
 							</ul>
 						</div>
+						<div class="widget widget-category">		
+							<h3 class="widget-title">Categories</h3>		
+							<ul>
+							<?php foreach ($blog_categories as $blog_category): ?>
+								<li>
+									<?php echo anchor('blogs/'.$blog_category['cat_slug'],$blog_category['menu_name'],'');?>
+								</li>
+							<?php endforeach; ?>
+							</ul>
+						</div>
 						<div class="widget widget-archives">		
 							<h3 class="widget-title">Archives</h3>	
 							2016	
@@ -31,16 +41,7 @@
 							</ul>
 						</div>
 
-						<div class="widget widget-category">		
-							<h3 class="widget-title">Categories</h3>		
-							<ul>
-							<?php foreach ($blog_categories as $blog_category): ?>
-								<li>
-									<?php echo anchor('blogs/'.$blog_category['cat_slug'],$blog_category['menu_name'],'');?>
-								</li>
-							<?php endforeach; ?>
-							</ul>
-						</div>
+						
 					</aside>
 				</div>
 			</div>

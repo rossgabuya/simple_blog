@@ -15,7 +15,7 @@ class Pages extends CI_Controller {
 	        $data['title'] = ucfirst($page); // Capitalize the first letter
 	        $data['blog_categories'] = $this->blog_model->get_blog_categories();
 	        $data['all_blog_posts'] = $this->blog_model->get_all_blog_posts();
-
+	        $data['is_admin'] = false;
 
 
 	        $this->load->view('templates/header', $data);

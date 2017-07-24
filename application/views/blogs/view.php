@@ -33,7 +33,7 @@ echo anchor('home','Back to Home','class=\'btn btn-warning\'');*/
 								<div class="entry-meta">
 									<span class="post-category"><?php echo anchor('blogs/'.$blog_post['cat_slug'],$menu_name,'');?></span>
 			
-									<span class="post-date"><a href="#"><time class="entry-date" datetime="<?php echo date($blog_post['created']);?>"><?php echo date('D, F j,Y @ h:ia',mysql_to_unix($blog_post['created']));?></time></a></span>
+									<span class="post-date"><a href="#"><time class="entry-date" datetime="<?php echo date($blog_post['created_at']);?>"><?php echo date('D, F j,Y @ h:ia',mysql_to_unix($blog_post['created_at']));?></time></a></span>
 			
 									<span class="post-author"><a href="#">Albert Einstein</a></span>
 			
@@ -41,7 +41,29 @@ echo anchor('home','Back to Home','class=\'btn btn-warning\'');*/
 								</div>
 							</header>
 							<div class="entry-content clearfix">
-								<p><?php echo $blog_post['content'];?></p>
+								<p>
+									
+									<?php 
+								$position = 500;
+								$content = $blog_post['content'];
+								$post = substr($content,$position,1);
+
+								if($post != " "){
+									while($post != " "){
+										$i = 1;
+										$position = $position + $i;
+										$content = $blog_post['content'];
+										$post = substr($content,$position,1);
+
+									}
+								}
+
+								$post = substr($content,0,$position);
+								echo $post;
+								echo "...";
+								
+								?>
+								</p>
 								<div class="read-more cl-effect-14">
 								<?php echo anchor('blogs/'.$blog_post['cat_slug'].'/'.$blog_post['post_slug'],'Continue reading <span class="meta-nav">→</span>','class="more-link"');?>
 								</div>
